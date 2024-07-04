@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Smythe&display=swap">
+    <title>Food Ordering App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <img src="header.png" alt="Header Image">
+        </div>
+        <div class="body-container">
+            <div id="menu-container"></div>
+            <div id="order-container"></div>
+            <div id="thank-you-message" style="display: none;"></div>
+            <div id="modal-container" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <p class="form-header">Enter Payment Details</p>
+                    <form id="payment-form">
+                        <input type="text" id="name" placeholder="Enter your name" name="name" required>
+                        <input type="text" id="card-number" placeholder="Enter card number" name="card-number" pattern="\d{16}" maxlength="16" required>
+                        <input type="text" id="expiry" placeholder="Enter expiry date (mm/yyyy)" name="expiry" pattern="\d{2}/\d{4}" required>
+                        <input type="text" id="cvv" placeholder="Enter CVV" name="cvv" pattern="\d{3}" maxlength="3" required>
+                        <button class="pay-btn" type="submit">Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="data.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
